@@ -41,7 +41,7 @@ Consider a scenario of two intelligent vehicles, A and B, as shown in the follow
      distance=(points[:,1]**2+points[:,0]**2)**0.5         # in meters
      ```
      
-     ![confidence zone](confidence_zone.jpg)
+     ![confidence zone](image/confidence_zone.jpg)
      
    * for each lidar ply, mark the triangle marked by **points[i]**,**points[i+1]**, and **(0,0)** as a confident zone if
      * the Z coordinate is less than -1 for **points[i]** and **points[i+1]**
@@ -50,6 +50,6 @@ Consider a scenario of two intelligent vehicles, A and B, as shown in the follow
 
    *  Combine the confidence zones into a single heatmap
      
-     ![heatmap](heatmap.jpg)
+     ![heatmap](image/heatmap.jpg)
 
 
