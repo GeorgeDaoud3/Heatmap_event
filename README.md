@@ -40,7 +40,8 @@ Consider a scenario of two intelligent vehicles, A and B, as shown in the follow
      angles=np.atan2(points[:,1],points[:,0])*180/np.pi    # angle in degree
      distance=(points[:,1]**2+points[:,0]**2)**0.5         # in meters
      ```
-     ![confidence zone](confidence_zone.png)
+     
+     ![confidence zone](confidence_zone.jpg)
      
    * for each lidar ply, mark the triangle marked by **points[i]**,**points[i+1]**, and **(0,0)** as a confident zone if
      * the Z coordinate is less than -1 for **points[i]** and **points[i+1]**
@@ -48,6 +49,7 @@ Consider a scenario of two intelligent vehicles, A and B, as shown in the follow
      * **0 < angles[i+1] - angles[i]  < 1.25 * delta_angle**  ( delta_angle=360/52)
 
    *  Combine the confidence zones into a single heatmap
-     ![heatmap](heatmap.png)
+     
+     ![heatmap](heatmap.jpg)
 
 
