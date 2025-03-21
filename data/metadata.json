@@ -1,0 +1,8 @@
+{
+  "lidar_A":"./data/LidarA/A_001.ply",
+  "lidar_B":"./data/LidarB/B_001.ply",
+  "Lidar_A_location_pixel":[442,190],
+  "Lidar_B_location_pixel":[356,448],
+  "meter2pixel": 28.6,
+  "delta_angle_deree":6.923
+}
