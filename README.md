@@ -23,6 +23,8 @@ Consider a scenario of two intelligent vehicles, A and B, as shown in the follow
 1. Use Figma in the Design Challenge. If you need inspiration to start, check this [page](https://github.com/user-attachments/assets/efe2da13-8fc3-4bd8-8a9f-2867577ed3d)
    
 2. For the programming challenge
+   * Lidar data, aerial view, and a metadata file are in the [data](/data/) folder
+     
    * Use The following code to read the Lidar (ply) files
      ```python
      # Data read & write
@@ -38,6 +40,7 @@ Consider a scenario of two intelligent vehicles, A and B, as shown in the follow
      angles=np.atan2(points[:,1],points[:,0])*180/np.pi    # angle in degree
      distance=(points[:,1]**2+points[:,0]**2)**0.5         # in meters
      ```
+     ![confidence zone](confidence_zone.png)
      
    * for each lidar ply, mark the triangle marked by **points[i]**,**points[i+1]**, and **(0,0)** as a confident zone if
      * the Z coordinate is less than -1 for **points[i]** and **points[i+1]**
@@ -45,6 +48,6 @@ Consider a scenario of two intelligent vehicles, A and B, as shown in the follow
      * **0 < angles[i+1] - angles[i]  < 1.25 * delta_angle**  ( delta_angle=360/52)
 
    *  Combine the confidence zones into a single heatmap
-     
+     ![heatmap](heatmap.png)
 
 
